@@ -2,4 +2,6 @@
 	editor = nvim
 [user]
 	name = Seeking-Z
-	email = wqfxzhzh@126.com
+	email = 114598245+Seeking-Z@users.noreply.github.com
+[init]
+	defaultBranch = main

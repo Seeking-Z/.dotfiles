@@ -1,0 +1,22 @@
+# SSH private files
+.ssh/*
+!.ssh/config
+
+# Shell history
+.bash_history
+.zsh_history
+
+# Editor temporary files
+*.swp
+*.tmp
+
+# Cache
+.cache/
+
+# Ignore everything in .local
+.local/*
+
+# Keep personal scripts
+!.local/bin/
+.local/bin/*
+!.local/bin/scripts/

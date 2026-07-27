@@ -1,0 +1,5 @@
+google-chrome
+v2rayn
+wechat-bin
+yay
+yay-debug

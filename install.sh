@@ -25,8 +25,13 @@ link() {
     fi
 
     if [ -L "$target" ]; then
-        echo "Already linked: $target"
-        return
+        if [ "$(readlink "$target")" = "$source" ]; then
+            echo "Already linked: $target"
+            return
+        else
+            echo "Wrong link found: $target"
+            rm "$target"
+        fi
     fi
 
     backup "$target"
@@ -78,6 +83,16 @@ for config in "${configs[@]}"; do
     link "$dotfiles/.config/$config" "$HOME/.config/$config"
 done
 
+# systemd user units
+for unit in "$dotfiles/.config/systemd/user"/*; do
+    [ -f "$unit" ] || continue
+
+    link "$unit" "$HOME/.config/systemd/user/$(basename "$unit")"
+done
+
+echo "Daemon reload"
+systemctl --user daemon-reload
+systemctl --user enable ssh-agent.service
 
 # ~/.local/bin/scripts
 link "$dotfiles/.local/bin/scripts" "$HOME/.local/bin/scripts"

@@ -12,6 +12,7 @@
 
 # Cache
 .cache/
+.config/fcitx5/conf/cached_layouts
 
 # Ignore everything in .local
 .local/*

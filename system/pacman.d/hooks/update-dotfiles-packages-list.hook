@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Updating dotfiles package lists...
+When = PostTransaction
+Exec = /usr/bin/runuser -u __USER__ -- __HOME__/.local/bin/scripts/update-packages.sh

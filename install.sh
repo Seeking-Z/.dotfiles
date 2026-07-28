@@ -107,4 +107,38 @@ chmod 700 "$HOME/.ssh"
 chmod 600 "$HOME/.ssh/config"
 
 
+# Packages
+package_script="$dotfiles/.local/bin/scripts/install-packages.sh"
+
+if [ -f "$package_script" ]; then
+    echo "Start to install packages..."
+
+    "$package_script"
+fi
+
+
+# pacman hooks
+pacman_hook_dir="$dotfiles/system/pacman.d/hooks"
+pacman_hook_dst="/etc/pacman.d/hooks"
+
+if [ -d "$pacman_hook_dir" ]; then
+    echo "Installing pacman hooks..."
+
+    sudo mkdir -p "$pacman_hook_dst"
+
+    for hook in "$pacman_hook_dir"/*.hook; do
+        [ -f "$hook" ] || continue
+
+        hook_name="$(basename "$hook")"
+
+        echo "Installing: $hook_name"
+
+        sed \
+            -e "s|__USER__|$USER|g" \
+            -e "s|__HOME__|$HOME|g" \
+            "$hook" | sudo tee "$pacman_hook_dst/$hook_name" > /dev/null
+    done
+fi
+
+
 echo "Done."

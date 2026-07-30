@@ -1,0 +1,5 @@
+{
+  "clock": {
+    "format": "<span size='11pt'>{:%H:%M }</span>"
+  }
+}

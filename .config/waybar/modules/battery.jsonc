@@ -1,0 +1,15 @@
+{
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} <span size='11pt'>{capacity}%</span>",
+    "format-charging": "<span size='12pt'>󱐌</span> <span size='11pt'>{capacity}%</span>",
+    "format-plugged": " <span size='11pt'>{capacity}%</span>",
+    "format-icons": {
+      "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    }
+  }
+}

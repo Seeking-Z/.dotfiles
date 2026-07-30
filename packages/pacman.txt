@@ -2,6 +2,9 @@ alsa-utils
 amd-ucode
 base
 base-devel
+bluez-utils
+brightnessctl
+btop
 btrfs-progs
 clang
 cmake
@@ -22,7 +25,6 @@ grub-btrfs
 hyprland
 hyprlauncher
 hyprlock
-hyprpaper
 hyprpolkitagent
 iwd
 keyd
@@ -48,6 +50,7 @@ openssh
 os-prober
 pipewire-alsa
 pipewire-pulse
+power-profiles-daemon
 qt5-wayland
 qt6-wayland
 sbctl
@@ -55,6 +58,7 @@ sddm
 slurp
 snap-pac
 snapper
+steam
 sudo
 swappy
 swaync

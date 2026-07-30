@@ -1,5 +1,7 @@
 google-chrome
+linux-wallpaperengine-git
 v2rayn
+waypaper
 wechat-bin
 yay
 yay-debug

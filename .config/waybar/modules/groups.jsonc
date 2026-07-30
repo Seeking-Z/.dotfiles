@@ -1,0 +1,14 @@
+{
+  "group/audio": {
+    "orientation": "horizontal",
+    "modules": ["pulseaudio", "pulseaudio#microphone"]
+  },
+  "group/connections": {
+    "orientation": "horizontal",
+    "modules": ["network", "bluetooth"]
+  },
+  "group/tray-group": {
+    "orientation": "horizontal",
+    "modules": ["tray", "custom/tray-arrow"]
+  }
+}

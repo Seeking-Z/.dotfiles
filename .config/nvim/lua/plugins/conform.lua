@@ -51,6 +51,15 @@ return {
 				},
 			},
 
+			formatters = {
+				prettier = {
+					prepend_args = {
+						"--trailing-comma",
+						"none",
+					},
+				},
+			},
+
 			vim.keymap.set("n", "<leader>F", function()
 				conform.format({
 					async = true,

@@ -1,0 +1,17 @@
+* {
+    bg0: #0f1416eb;
+    bg1: #1b2023;
+    bg2: #252b2dcc;
+    bg3: #88d1ec;
+
+    fg0: #dee3e6;
+    fg1: #ffffff;
+    fg2: #bfc8cc;
+    fg3: #8a9296;
+}
+
+@import "template/rounded-template.rasi"
+
+element selected {
+    text-color: #003544;
+}

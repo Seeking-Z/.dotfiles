@@ -15,7 +15,8 @@ hl.bind(
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(programs.menu))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(programs.menu .. " -show drun"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(programs.menu .. " -show window"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind("SUPER" .. " + L", hl.dsp.exec_cmd(programs.locker))
 hl.bind(mainMod .. " + R", hl.dsp.layout("togglesplit")) -- dwindle only
@@ -117,15 +118,18 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("translate.sh"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("translate-detail.sh"))
 
 -- swaync-client
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
-hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -C"))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -C"))
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 -- Bluetooth
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.terminal .. " -e bluetoothctl"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("rfkill toggle bluetooth"))
 
 -- Network
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(programs.terminal .. " -e nmtui"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(programs.terminal .. " -e nmtui"))
 
 -- toggle-power
 hl.bind("SUPER + P", hl.dsp.exec_cmd("toggle-power.sh"))
+
+-- Clipboard
+hl.bind("SUPER" .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))

@@ -77,6 +77,7 @@ configs=(
     "nvim"
     "swaync"
     "waybar"
+    "rofi"
 )
 
 for config in "${configs[@]}"; do
@@ -108,13 +109,13 @@ chmod 600 "$HOME/.ssh/config"
 
 
 # Packages
-package_script="$dotfiles/.local/bin/scripts/install-packages.sh"
-
-if [ -f "$package_script" ]; then
-    echo "Start to install packages..."
-
-    "$package_script"
-fi
+# package_script="$dotfiles/.local/bin/scripts/install-packages.sh"
+# 
+# if [ -f "$package_script" ]; then
+#     echo "Start to install packages..."
+# 
+#     "$package_script"
+# fi
 
 
 # pacman hooks

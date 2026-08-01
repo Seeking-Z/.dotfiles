@@ -1,0 +1,8 @@
+configuration {
+    modi: "drun,run,window";
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;
+
+}
+
+@theme "~/.config/rofi/themes/rounded-nord-dark.rasi"

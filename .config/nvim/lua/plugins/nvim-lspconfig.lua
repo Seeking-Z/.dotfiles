@@ -87,9 +87,14 @@ return {
 			},
 		})
 
+		vim.lsp.config("bashls", {
+			capabilities = capabilities,
+		})
+
 		vim.lsp.enable("lua_ls")
 		vim.lsp.enable("jsonls")
 		vim.lsp.enable("cssls")
 		vim.lsp.enable("clangd")
+		vim.lsp.enable("bashls")
 	end,
 }

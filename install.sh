@@ -68,6 +68,16 @@ for file in "${home_files[@]}"; do
 done
 
 
+# XDG config files
+config_files=(
+    "electron-flags.conf"
+)
+
+for config_file in "${config_files[@]}"; do
+    link "$dotfiles/.config/$config_file" "$HOME/.config/$config_file"
+done
+
+
 # XDG config directories
 configs=(
     "fcitx5"
@@ -140,6 +150,32 @@ if [ -d "$pacman_hook_dir" ]; then
             "$hook" | sudo tee "$pacman_hook_dst/$hook_name" > /dev/null
     done
 fi
+
+
+
+# pam
+pam_dir="$dotfiles/system/pam.d"
+pam_dst="/etc/pam.d"
+
+if [ -d "$pam_dir" ]; then
+    echo "Installing pam files..."
+
+    sudo mkdir -p "$pam_dst"
+
+    for file in "$pam_dir"/*; do
+        [ -f "$file" ] || continue
+
+        file_name="$(basename "$file")"
+
+        echo "Installing: $file_name"
+
+        sed \
+            -e "s|__USER__|$USER|g" \
+            -e "s|__HOME__|$HOME|g" \
+            "$file" | sudo tee "$pam_dst/$file_name" > /dev/null
+    done
+fi
+
 
 
 echo "Done."

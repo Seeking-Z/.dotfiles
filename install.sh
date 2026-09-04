@@ -128,6 +128,19 @@ chmod 600 "$HOME/.ssh/config"
 # fi
 
 
+# v2rayn-bin symlink to /usr/bin
+v2rayn_src="/opt/v2rayn-bin/v2rayN"
+v2rayn_dst="/usr/bin/v2rayn"
+
+if [ -f "$v2rayn_src" ]; then
+    echo "Linking v2rayn to /usr/bin..."
+    sudo ln -sf "$v2rayn_src" "$v2rayn_dst"
+    echo "Linked: $v2rayn_dst -> $v2rayn_src"
+else
+    echo "v2rayn-bin not found at $v2rayn_src, skipping symlink"
+fi
+
+
 # pacman hooks
 pacman_hook_dir="$dotfiles/system/pacman.d/hooks"
 pacman_hook_dst="/etc/pacman.d/hooks"

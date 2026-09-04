@@ -15,6 +15,7 @@ PS1='[\u@\h \W]\$ '
 export HTTP_PROXY="http://127.0.0.1:10808"
 export HTTPS_PROXY="http://127.0.0.1:10808"
 export ALL_PROXY="socks5://127.0.0.1:10808"
+export NO_PROXY="localhost,127.0.0.1,::1"
 
 
 # SSH_AUTH_SOCK
@@ -29,8 +30,17 @@ path_append() {
 }
 
 path_append "$HOME/.local/bin/scripts"
+path_append "$HOME/.local/bin/"
 
 export PATH
 
 
+# Disable alternate screen buffer for Claude Code (restore v2.1.89 behavior)
+export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1
+
 set -o vi
+
+# llm via cc-switch with Nvidia model
+llm-nvidia() {
+    llm openai endpoint http://127.0.0.1:15721/v1 -m nvidia/nemotron-3-ultra-550b-a55b "$@"
+}

@@ -3,7 +3,6 @@ claude-code
 google-chrome
 linux-wallpaperengine-git
 onlyoffice-bin
-sioyek-git
 v2rayn-bin
 waypaper
 wechat-bin

@@ -71,6 +71,7 @@ done
 # XDG config files
 config_files=(
     "electron-flags.conf"
+    "user-dirs.dirs"
 )
 
 for config_file in "${config_files[@]}"; do
@@ -88,6 +89,7 @@ configs=(
     "swaync"
     "waybar"
     "rofi"
+    "zathura"
 )
 
 for config in "${configs[@]}"; do

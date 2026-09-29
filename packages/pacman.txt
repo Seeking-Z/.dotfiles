@@ -1,5 +1,6 @@
 alsa-utils
 amd-ucode
+android-tools
 base
 base-devel
 bluez-utils
@@ -87,3 +88,5 @@ wl-clipboard
 xdg-desktop-portal-hyprland
 xorg-xrdb
 yarn
+zathura
+zathura-pdf-mupdf

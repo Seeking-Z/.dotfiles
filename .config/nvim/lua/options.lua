@@ -9,6 +9,7 @@ opt.relativenumber = true
 -- 缩进
 opt.tabstop = 4
 opt.shiftwidth = 4
+opt.softtabstop = 4
 opt.expandtab = true
 
 -- 鼠标
@@ -26,4 +27,3 @@ opt.clipboard = "unnamedplus"
 
 -- 撤销文件
 opt.undofile = true
-

@@ -4,19 +4,13 @@ return {
 	config = function()
 		local dap = require("dap")
 
-		-- codelldb adapter
-		dap.adapters.codelldb = {
-			type = "server",
-
-			port = "${port}",
-
-			executable = {
-				command = "codelldb",
-
-				args = {
-					"--port",
-					"${port}",
-				},
+		-- gdb adapter
+		dap.adapters.gdb = {
+			type = "executable",
+			command = "gdb",
+			args = {
+				"-i",
+				"dap",
 			},
 		}
 
@@ -25,7 +19,7 @@ return {
 			{
 				name = "Launch",
 
-				type = "codelldb",
+				type = "gdb",
 
 				request = "launch",
 
@@ -38,7 +32,7 @@ return {
 				cwd = "${workspaceFolder}",
 
 				-- 启动后停在 main
-				stopOnEntry = false,
+				stopAtBeginningOfMainSubprogram = false,
 			},
 		}
 
@@ -52,11 +46,18 @@ return {
 			desc = "Debug continue",
 		})
 
-		-- Terminate
-		vim.keymap.set("n", "<F6>", function()
+		-- Terminate (Shift+F5 -> F17)
+		vim.keymap.set("n", "<F17>", function()
 			dap.terminate()
 		end, {
 			desc = "Terminate debug session",
+		})
+
+		-- Toggle breakpoint
+		vim.keymap.set("n", "<F9>", function()
+			dap.toggle_breakpoint()
+		end, {
+			desc = "Toggle breakpoint",
 		})
 
 		-- Step over
@@ -73,8 +74,8 @@ return {
 			desc = "Debug step into",
 		})
 
-		-- Step out
-		vim.keymap.set("n", "<F12>", function()
+		-- Step out (Shift+F11 -> F23)
+		vim.keymap.set("n", "<F23>", function()
 			dap.step_out()
 		end, {
 			desc = "Debug step out",

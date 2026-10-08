@@ -58,6 +58,7 @@ pipewire-pulse
 power-profiles-daemon
 python-pip
 python-pipx
+qalculate-gtk
 qt5-wayland
 qt6-wayland
 rofi

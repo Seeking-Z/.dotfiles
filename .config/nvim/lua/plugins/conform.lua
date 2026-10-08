@@ -52,6 +52,12 @@ return {
 			},
 
 			formatters = {
+				clang_format = {
+					prepend_args = {
+						"--style={IndentWidth: 4, UseTab: Never}",
+					},
+				},
+
 				prettier = {
 					prepend_args = {
 						"--trailing-comma",

@@ -90,6 +90,7 @@ configs=(
     "waybar"
     "rofi"
     "zathura"
+    "aria2"
 )
 
 for config in "${configs[@]}"; do

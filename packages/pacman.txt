@@ -1,6 +1,7 @@
 alsa-utils
 amd-ucode
 android-tools
+aria2
 base
 base-devel
 bluez-utils

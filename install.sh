@@ -91,6 +91,7 @@ configs=(
     "rofi"
     "zathura"
     "aria2"
+    "tmux-powerline"
 )
 
 for config in "${configs[@]}"; do

@@ -4,6 +4,7 @@ android-tools
 aria2
 base
 base-devel
+bc
 bluez-utils
 brightnessctl
 btop

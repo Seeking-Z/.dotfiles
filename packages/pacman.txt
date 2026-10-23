@@ -93,3 +93,4 @@ xorg-xrdb
 yarn
 zathura
 zathura-pdf-mupdf
+zsh

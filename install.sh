@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 set -e
 
@@ -61,6 +61,8 @@ home_files=(
     ".bash_profile"
     ".gitconfig"
     ".tmux.conf"
+    ".zshrc"
+    ".zshenv"
 )
 
 for file in "${home_files[@]}"; do

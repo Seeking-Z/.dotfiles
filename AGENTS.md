@@ -1,6 +1,6 @@
 # Dotfiles 操作规范
 
-本文件是本仓库自动化与协作操作的入口索引。具体规范按主题放在 [`agents/`](agents/) 中；开始任务前先遵守工作流程，再按任务查阅相关模块。
+本文件是本仓库自动化与协作操作的入口索引。具体规范按主题放在 [`agents/`](agents/) 中；该目录中的普通 Markdown 文件不保证由工具自动载入，必须先遵守工作流程，再按任务查阅适用模块及其链接的子规范。
 
 ## 必须遵守的工作流程
 
@@ -16,7 +16,7 @@
 先阅读与任务相关的模块入口；若入口链接到子规范，继续查阅其中适用于当前任务的内容，并沿适用子规范的链接递归查阅更深层规范。
 
 - 定位配置来源、判断链接或任务范围：[`agents/repository-and-scope.md`](agents/repository-and-scope.md)
-- 识别操作系统、主机和工具环境：[`agents/system-context.md`](agents/system-context.md)
+- 检查与任务有关的系统环境：[`agents/system-context.md`](agents/system-context.md)
 - 检查工作区、审查差异或恢复文件：[`agents/git-workflow.md`](agents/git-workflow.md)
 - 编辑配置文件：[`agents/file-editing.md`](agents/file-editing.md)
 - 运行命令、安装依赖或处理系统级副作用：[`agents/commands-and-side-effects.md`](agents/commands-and-side-effects.md)

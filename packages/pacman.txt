@@ -86,6 +86,10 @@ ttf-nerd-fonts-symbols-mono
 ufw
 vim
 waybar
+wine
+wine-gecko
+wine-mono
+winetricks
 wireplumber
 wl-clipboard
 xdg-desktop-portal-hyprland

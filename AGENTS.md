@@ -17,7 +17,7 @@
 
 - 定位配置来源、判断链接或任务范围：[`agents/repository-and-scope.md`](agents/repository-and-scope.md)
 - 检查与任务有关的系统环境：[`agents/system-context.md`](agents/system-context.md)
-- 检查工作区、审查差异或恢复文件：[`agents/git-workflow.md`](agents/git-workflow.md)
+- 检查改动、建立或审查提交、恢复文件：[`agents/git-workflow.md`](agents/git-workflow.md)
 - 编辑配置文件：[`agents/file-editing.md`](agents/file-editing.md)
 - 运行命令、安装依赖或处理系统级副作用：[`agents/commands-and-side-effects.md`](agents/commands-and-side-effects.md)
 - 应用配置、创建链接或启用服务：[`agents/deployment-and-activation.md`](agents/deployment-and-activation.md)
